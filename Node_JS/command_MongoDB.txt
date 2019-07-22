@@ -1,0 +1,47 @@
+Oracle DB           Mongo DB
+----------         -----------
+Database           Database
+Table              Collection
+Rows               Documents
+Column             Field
+
+College (DB)
+   -> Student (Collection)
+         -> name (Field)
+		 -> age
+		 -> course
+		 -> address
+		 
+INSERT
+------
+SQL: INSERT INTO EMPLOYEE () VALUES ();
+MongoDB : db.Student.insertOne({
+               name : 'Rajan',
+			   age : 22,
+			   course : 'MCA',
+			   address : 'Hyderabad'
+		  });
+		  
+		  db.Teacher.insertMany([]);
+		 
+READ
+-----
+SQL : SELECT * FROM STUDENT WHERE NAME='Rajan';
+MongoDB: db.Student.find({name:'Rajan'}).pretty();		 
+UPDATE
+------
+SQL: UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition;	
+MongoDB : db.Teacher.updateOne(
+			  { "id" : 1 },
+			  { $set: { "first_name" : "NAVEEN" , "last_name": "SAGGAM" } }
+		   );	
+db.Teacher.updateOne({
+			  { "id" : 1 },
+			  { $set: { "first_name" : "NAVEEN" , "last_name": "SAGGAM" } }},
+
+		   ); 
+		 
+DELETE
+------
+SQL: DELETE from EMPLOYEE WHERE  id = 2;
+MongoDB: db.Teacher.deleteOne({id:2});		 

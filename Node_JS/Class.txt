@@ -1,0 +1,422 @@
+NodeJS
+============
+Modules
+1) Core Modules
+2) 3rd Party--------> Express JS
+3) Custom Modules
+
+Centeralize Repositry for NodeJS--> npm
+
+ENvironment
+REPL Environmet
+R ->Read
+E ->Eval
+P ->Print
+L ->Loop
+
+Server Side 
+
+Usefull Command For NodeJS
+============================
+1)go to parents folder
+ex: cd ..
+2)go to child folder
+ex: cd <Folder Name/Path>
+3) clear the screen
+ex cls
+4) Execute a node js file
+ex: npm install -g <package_name>
+		or
+	npm i -g <package_name>
+5) install any node js package locally
+ex: npm install <package_name> --save
+		or
+	npm i <package_name> --save
+6)update any node js package
+ex: npm update <package_name>
+
+7)uninstall any node js package
+ex: npm uninstall <package_name>
+
+8)create a package.json config file
+ex: npm init
+
+9) Run the Test file in Node js 
+ex: npm run test
+
+10) to build the node js application
+ex: npm rum build
+
+11) to start the node js server
+ex: npm start
+
+
+							Modules
+							================
+To Import Core Module
+---------------------
+const Variable_Name= require(''Module_Name);
+
+1) Core Module -> OS FS Path
+Path-> we can construct the absolute path
+
+Global Variable in Path Module
+==============================
+__dirname ->  Return The Current folder Address
+__filename -> Return the current file Address
+
+
+
+Custom Module
+=================
+const Variable_Name = require('./JS_File_Name');
+
+To Export Module Function, this is required for Custome Module---
+
+module.exports= {
+	property: function_Name
+			or
+	function_Name
+};
+
+module.exports.function;
+
+
+3rd Party Module
+=====================
+Loadash Module-- JS utility Liabrary
+body-parser module
+
+Node JS Application
+----> package.json- this file is require for 3rd party module - project configuaration file
+Name
+author
+version
+github repository
+dependent Modules
+scripts to start, build, test the application
+npm init-- command to create package.json file
+
+Node JS PAckage Installation
+--------------------------------
+Global Package
+Local Package
+Moment.js
+
+Package Importing
+const varName = require('package name');
+
+npm install lodash --save
+
+Auto Restart Server Module
+------------------------
+nodemon
+npm install -g nodemon
+
+Limitation of Node Js
+==========================
+1) Duplication of Styles, no styles.css
+2)we have to use module to display the data
+3)no clear seperation of http request
+4)type of response no clear separation 
+
+
+					Express JS
+==============================================================================
+-> 3rd Party Module of Node JS
+-> For faster and efficient webapps for server side
+installation
+----------------
+npm install express --save
+package.json file require---- npm init----to install
+HTTP->, GET, POST, DELETE, PUT
+
+GET-> req.get()
+POST-> req.post()
+
+for Response Function
+re.send() -> for plain text or html text
+res.sendFile() ->for Html file
+res.json()-> for Json file
+res.download() -> for download file
+res.render()-> for Template File
+
+Routing with Express Js
+------------------------
+1) routing
+2) styles.css
+
+For static file
+app.use('/dircectory_name',express.static('public'));
+
+Express + Bootstrap
+================================================
+Needed
+Express JS-> Package.json
+
+1)Create Server
+2)Create HTML Page
+3) Keep the html file in seprate file
+4)Route to Server
+5)Make all the CSS and JS file as Static File in Public folder using this function (app.use('/dircectory_name'express.static('public'))
+Bootstrap File Required
+-------------------------
+CSS Required File
+-----------------
+font-awesome.css
+font-awesome.css Online Link
+bootstrap.css
+mdb.css
+JS Required File
+--------------------
+jquery.js
+popper.js
+bootstrap.js
+mdb.js
+
+
+
+1) Simple get
+	/home
+	/contact
+2) Query parameters
+/profile/140 -> profile Page
+for get request paramenter
+
+
+3) Query String
+	127.0.0.1:3000/contact?name=john
+	127.0.0.1:3000/contact?name=john&age=44
+	127.0.0.1:3000/contact?name=john&age=44&desg=manager    
+app.get('/contact',(req,res)=>{
+	let query = req.query;
+});
+Limitation
+-------------
+Huge amount of datat can not be send
+we can not send sensative data
+
+
+4) Post:
+-----------------------------------------------
+
+
+to handle form data one 3rd Party module required
+body-parser
+import body-parser
+let body = require('body-parser')
+-----------------------------------------------
+app.post('/feedback',urlencodedparser(req,res)=> {
+	//Logic to get Data
+	
+	res.sendFile(path.join());
+});
+
+						Template Engines
+===========================================================
+To display form data back to html page 
+EJS-> 		Embedded JS -> .ejs -> <%= username %>Visit Official website to more detail
+PUG/JADE-> 	.pug---->     #{username}
+HBS-> 		.hbs------->  {{username}}
+
+Steps to use Template Engines
+-----------------------------
+1) Install the Template Engine
+	nomm install ejs --save
+2 create each file with an extention .ejs
+	Ex: home.ejs, profile.ejs
+3 add a middleware for template with Express Js
+	Ex: app.set('view engine', 'ejs');
+4 add JS code in ejs file
+
+
+Express Generator Tool
+-------------------
+for Automatic Folder Structure Creation
+Installation
+-----------------
+npm install express-generator -g
+
+Creation Folder structure
+-----------------------------
+express --view=ejs <project name>
+install all module ----> npm install
+to start server---- npm start
+http://
+
+
+MOdification for the files
+-----------------------
+1) package.json - change node to nodemon
+ change all var keyword to const in js file
+ change the static file path in main app.js
+ 
+ 
+PUG Template
+================
+Express Generator Tool
+Create Folder Structure
+========================
+express --view=pug <project_name>
+
+npm install  ->form npm module installation
+syntax:
+#{username}
+ex: #{selectedPeron.id}
+
+https://html2jade.org ---> to convert html to PUG
+
+HBS
+=============
+Folder structure-----  express --view=hbs <Project_Name>
+
+{{name}}
+
+
+Mongo-DB
+====================
+Database  -> 1975 -> CODD  -> RDMS  -> SQL
+Ex: Oracle, MySql, SQL Server, DB2 etc
+
+Not Only SQL
+-------------
+-> Mongo DB, Firebase, Couch DB etc
+
+CREATE -> Insert
+UPDATE -> 
+READ ->
+DELETE ->
+
+Mongo DB CURD / CURD Operation
+
+Using cmd prompt  		-->	DBA
+Standalone application  -->	Testing of Data
+Complete Website 		-->	For Website
+
+Oracle DB												Mongo DB
+
+Database								Database
+Table									Collection
+Rows									Document
+
+
+Create Database --- use dbname
+
+db.Student.insertOne({
+ name:'rajan',
+ age:'24',
+ course:'MCA',
+ })
+ 
+ db.Student.insertMany([{},{}]);   ---> for many table insertion
+ db.Teacher.insertMany([]);
+ 
+ READ Data: 
+ ===============
+ SQL -> SELCET * FROM table_name 
+ MongoDB  ->db.Student.find();
+Read Proper Data
+------------------
+ db.Student.find().pretty();
+ 
+ db.Student.find({name:rajan});
+ 
+ goto for Detail cmd -->mongodb quick refrence--> https://docs.mongodb.com/manual/reference/mongo-shell/
+ 
+ 
+ UPDATE
+ =============
+ db.Teacher.updateOne(
+		{id: 1},
+		{ $set: {"first_name": "Shashank", "last_name": "Suman"}}
+ );
+ 
+ DELETE
+ ===========
+ db.Teacher.deleteOne({id:2});
+ 
+ 
+ JavaScript -> Driver  ->  MongoDB
+ To connect JavaScript to MongoDb database a Driver required i.e. NodeJS Driver
+ 
+ 3rd Party Module  MongoDB--- npm install --mongodb --save
+ for 3rd party package.json file required -> npm init
+ 
+ ACT Services App -> Complaints Module
+ =======================================
+ -> Express Generator
+ -> Express JS , Node JS
+ ->Bootstrap
+ ->JQuery
+ ->MongoDB
+ ->Body Parser
+ ->nodemon
+ -> font awesome icons
+ 
+ create package
+ install npm module
+ change node to nodemon in start properties
+ in app.js change var to let 
+ create your own static file path
+ all routing logic write in index.js
+ link body-parser module in index.js
+ 
+ Database Connection in Server
+ =============================
+ Create Separate Folder for db
+ in this folder create a JS file and writ connection Logic in this file
+ 
+ 
+ Server Side Form Validation
+ =============================
+ -> JQuery Validator -> for client side
+ -> Express Validator -> for server side Validator --> It is third party module
+ npm install --save express-validator
+ 
+		3rd party Module
+usase Tool
+Express Generator  +   Bootstrap		
+
+Steps:-
+ create package
+ install npm module
+ install express validator module
+ change node to nodemon in start properties
+ in app.js change var to let 
+ create your own static file path
+ all routing logic write in index.js
+ link body-parser module in index.js
+ design ejs file in view folder
+ form form data install body-parser
+ connect body-parser in index.js
+ const {check, validationResult} = require('express-validator');---> link in index.js
+ 
+ check ->  to check the validation of any form field
+ validationResult -> holds the actual result of validation
+ 
+					Unit Testing
+====================================================
+ Mocha 	-> https://mochajs.org/
+ Chai 	-> https://www.chaijs.com/
+ JEST Framework
+ 
+ Coading practice -> https://codingbat.com
+ 
+ nom install mocha --save
+ npm install chai --save
+ 
+ app.js  -> Simple JS file
+ app.test.js---> testing file
+ 
+ To run the test-> npm run test (or) npm test
+ 
+JEST Framework
+======================
+it is use to test report
+npm install jest --save
+
+in package.json test: jest or jest --coverage
+
+for session and authentication 
+================================
+--->  passport.js Module

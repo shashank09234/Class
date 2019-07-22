@@ -1,0 +1,55 @@
+useful commands for Node JS
+---------------------------
+1) go to parents folder
+Ex: cd ..
+
+2) go to child folder
+Ex: cd <folder_name>
+
+3) see the list of files in the current folder
+Ex: dir
+
+4) clear the Screen
+Ex: cls
+
+5) Execute a node js file
+Ex: node <file_name>.js
+
+6) install any node js package globally
+Ex: npm install -g <package_name>
+		(OR) 
+	npm i -g <package_name>
+
+7) install any node js package locally
+Ex: npm install <package_name> --save
+			(OR)
+	npm  i <package_name> --save
+
+8) update any node js package
+Ex: npm update <package_name>
+
+9) uninstall any node package
+Ex: npm uninstall <package_name>
+
+10) create a package.json config file
+Ex: npm init
+
+11) Run the Test file in node js
+Ex: npm run test
+
+12) to Build the node js application
+Ex: npm run build
+
+13) to start the node js server
+Ex: npm start
+
+
+
+	
+
+
+
+
+
+
+

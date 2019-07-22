@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/style.css">
+    <title>ACT Services</title>
+</head>
+<body>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-danger">
+    <a class="navbar-brand" href="/">ACT Services</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/raise">Raise Complaints</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/list">List Of Complaints</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Raise Complaints -->
+<section>
+    <div class="jumbotron bg-light">
+        <div class="card">
+            <div class="card-body bg-success text-white animated jackInTheBox">
+                <h3>Thank You
+                    <span class="font-weight-bold"><%= complaint.username %></span>
+                    for Your Complaint
+                    <span class="font-weight-bold"><%= complaint.issue %></span>
+                    We are working on it, and for any other information our
+                    Service person wil get back to you on your Email Id
+                    <span class="font-weight-bold"><%= complaint.email %></span>
+                </h3>
+            </div>
+        </div>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequuntur cum dolores dolorum eligendi eveniet, fuga id illo illum ipsam laudantium natus neque quibusdam quidem quos tenetur vero? Accusamus accusantium iure ut. Culpa cumque fugiat, harum illum iure omnis placeat quam quisquam repudiandae suscipit, temporibus vero? Adipisci dicta, ducimus!</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam consequuntur cum dolores dolorum eligendi eveniet, fuga id illo illum ipsam laudantium natus neque quibusdam quidem quos tenetur vero? Accusamus accusantium iure ut. Culpa cumque fugiat, harum illum iure omnis placeat quam quisquam repudiandae suscipit, temporibus vero? Adipisci dicta, ducimus!</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-danger btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</section>
+
+
+<!-- Main Footer -->
+<footer class="p-3 bg-danger text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Copyright &copy; 2019 , ACT Services</h3>
+                <h6>All Rights Reserved</h6>
+                <h6>Developed & Maintained by ACT Services</h6>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../public/bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="../public/bootstrap/js/popper.min.js"></script>
+<script src="../public/bootstrap/js/bootstrap.js"></script>
+<script src="../public/bootstrap/js/mdb.js"></script>
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+    $('.carousel').carousel({
+        interval: 1000
+    });
+    CKEDITOR.replace( 'description' );
+</script>
+
+</body>
+</html>
